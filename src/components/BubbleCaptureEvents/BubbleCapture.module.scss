@@ -1,0 +1,17 @@
+@use 'src/styles/event';
+// @import 'src/styles/event';
+
+
+.grandParent {
+     position: relative;
+     @include event.squareBlock(red, 300px, 300px);
+
+
+     .parent {
+          @include event.innerBlock(rgb(0, 81, 255), 200px, 200px);
+     }
+
+     .child {
+          @include event.innerBlock(rgb(255, 0, 136), 100px, 100px);
+     }
+}
